@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_platform/screens/create_password_screen.dart';
+import 'package:music_platform/screens/auth/create_password_screen.dart';
 
 class EmailVerificationScreen extends StatefulWidget {
   const EmailVerificationScreen({super.key});

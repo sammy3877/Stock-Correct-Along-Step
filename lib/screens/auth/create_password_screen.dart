@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_platform/screens/nickname_screen.dart';
+import 'package:music_platform/screens/auth/nickname_screen.dart';
 
 
 class CreatePasswordScreen extends StatefulWidget {

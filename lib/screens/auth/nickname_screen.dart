@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_platform/screens/select_user_type_screen.dart';
+import 'package:music_platform/screens/auth/select_user_type_screen.dart';
 
 
 class NicknameScreen extends StatefulWidget {

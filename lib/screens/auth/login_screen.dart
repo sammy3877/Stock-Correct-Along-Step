@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_platform/screens/term_agreement_screen.dart';
+import 'package:music_platform/screens/auth/term_agreement_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -29,8 +29,6 @@ class LoginScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-
-
                   },
                   child: const Text('이메일로 로그인'),
                 ),
@@ -42,14 +40,12 @@ class LoginScreen extends StatelessWidget {
                 width: double.infinity,
                 child: OutlinedButton(
                   onPressed: () {
-
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => const TermAgreementScreen(),
                       ),
                     );
-
                   },
                   child: const Text('회원가입'),
                 ),

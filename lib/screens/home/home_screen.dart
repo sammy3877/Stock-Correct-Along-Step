@@ -1,30 +1,27 @@
 import 'package:flutter/material.dart';
 
-class SelectUserTypeScreen extends StatefulWidget {
-  const SelectUserTypeScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<SelectUserTypeScreen> createState() =>
-      _SelectUserTypeScreenState();
+  State<HomeScreen> createState() =>
+      _HomeScreenState();
 }
 
-class _SelectUserTypeScreenState extends State<SelectUserTypeScreen> {
+class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
         appBar: AppBar(
-          title: const Text('클뮤식 뮤즈님, 클뮤에 오신걸 환영해요'),
+          title: const Text('메인 화면'),
         ),
 
         body: Padding(
             padding: const EdgeInsets.all(24),
             child: Column(
                 children: [
-
-
-
 
                 ]
             )

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:music_platform/screens/email_verification_screen.dart';
+import 'package:music_platform/screens/auth/email_verification_screen.dart';
 
 class TermAgreementScreen extends StatefulWidget {
   const TermAgreementScreen({super.key});
