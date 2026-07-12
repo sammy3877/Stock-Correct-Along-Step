@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:music_platform/models/expert_type.dart';
+import 'package:music_platform/models/instrument_type.dart';
+import 'package:music_platform/screens/expert/lesson_fee_screen.dart';
+
 
 class InstrumentSelectionScreen extends StatefulWidget {
   const InstrumentSelectionScreen({super.key});
@@ -15,6 +17,9 @@ class _InstrumentSelectionScreenState extends State<InstrumentSelectionScreen> {
 
   @override
   Widget build(BuildContext context) {
+
+    bool canProceed = selectedInstrument != null;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('뮤지션 등록'),
@@ -31,20 +36,7 @@ class _InstrumentSelectionScreenState extends State<InstrumentSelectionScreen> {
               ),
             ),
 
-
-            // RadioListTile<InstrumentType>(
-            //   title: const Text('피아노'),
-            //   value: InstrumentType.piano,
-            //   groupValue: selectedInstrument,
-            //   onChanged: (value) {
-            //     setState(() {
-            //       selectedInstrument = value;
-            //     });
-            //   },
-            // ),
-
-
-            children: InstrumentType.values.map((instrument) {
+            ...InstrumentType.values.map((instrument) {
               return RadioListTile<InstrumentType>(
                 title: Text(instrument.displayName),
                 value: instrument,
@@ -54,10 +46,24 @@ class _InstrumentSelectionScreenState extends State<InstrumentSelectionScreen> {
                     selectedInstrument = value;
                   });
                 },
-              ),
+              );
             }).toList(),
 
-
+            const Spacer(),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: canProceed? () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const LessonFeeScreen(),
+                    )
+                  );
+                }: null,
+                child: const Text('다음')
+              )
+            )
 
           ]
         )
