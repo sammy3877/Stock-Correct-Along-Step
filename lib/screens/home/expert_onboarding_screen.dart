@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:music_platform/models/expert_type.dart';
+import 'package:music_platform/screens/expert/instrument_selection_screen.dart';
+
 
 class ExpertOnboardingScreen extends StatefulWidget {
   const ExpertOnboardingScreen({super.key});
@@ -91,9 +93,13 @@ class _ExpertOnboardingScreenState extends State<ExpertOnboardingScreen> {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: canProceed? () {
-                        print(selectedExpertType);
-                      }
-                      : null,
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const InstrumentSelectionScreen(),
+                            )
+                        );
+                      }: null,
                       child: const Text('다음')
                     )
                   )
